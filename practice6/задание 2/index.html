@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Галерея продуктов Flatiron</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Галерея продуктов Flatiron</h1>
+    <label for="category-select">Фильтр по категории:</label>
+    <select id="category-select">
+      <option value="all">Все</option>
+      <option value="fruits">Фрукты</option>
+      <option value="vegetables">Овощи</option>
+      <option value="bakery">Выпечка</option>
+    </select>
+  </header>
+
+  <main>
+    <section id="gallery">
+
+      <div class="artifact-card" data-category="fruits">
+        <h2 class="artifact-name">Яблоко</h2>
+        <img src="https://m.dom-eda.com/uploads/images/catalog/item/86df51de21/c25c94fe96_1000.jpg" alt="Яблоко" />
+        <p class="artifact-short-desc">Сочное и сладкое яблоко с хрустящей кожурой.</p>
+        <button class="details-btn">Подробнее</button>
+        <span class="click-counter">Кликов: 0</span>
+      </div>
+
+      <div class="artifact-card" data-category="vegetables">
+        <h2 class="artifact-name">Морковь</h2>
+        <img src="https://images.gastronom.ru/me3Nru3uDzk7V9rEKYZvxGh-ZczoMzn9Eu8ZkrFZE5E/pr:product-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzJiYThhNzc1LTJlNzAtNGVkNS1iODlkLWMzNTI1NDBmNDFhMS5qcGc.webp" alt="Морковь" />
+        <p class="artifact-short-desc">Свежая морковь, богатая витамином А.</p>
+        <button class="details-btn">Подробнее</button>
+        <span class="click-counter">Кликов: 0</span>
+      </div>
+
+      <div class="artifact-card" data-category="bakery">
+        <h2 class="artifact-name">Булочка с корицей</h2>
+        <img src="https://e52e3ee2-628b-49a9-9e26-e5a61fd72b20.selcdn.net/upload/resize_cache/iblock/cce/1920_1080_1/%D0%91%D1%83%D0%BB%D0%BE%D1%87%D0%BA%D0%B0%20%D1%81%20%D0%BA%D0%BE%D1%80%D0%B8%D1%86%D0%B5%D0%B9%20%D0%B2%20%D0%BA%D1%80%D1%83%D0%B6%D0%BA%D0%B5.jpg" alt="Булочка с корицей" />
+        <p class="artifact-short-desc">Ароматная булочка с корицей и сахарной глазурью.</p>
+        <button class="details-btn">Подробнее</button>
+        <span class="click-counter">Кликов: 0</span>
+      </div>
+
+      <div class="artifact-card" data-category="fruits">
+        <h2 class="artifact-name">Банан</h2>
+        <img src="https://images.silpo.ua/products/500x500/f5214071-6d83-4de8-b655-b977809cf880.png" alt="Банан" />
+        <p class="artifact-short-desc">Спелый банан с кремовой текстурой и сладким вкусом.</p>
+        <button class="details-btn">Подробнее</button>
+        <span class="click-counter">Кликов: 0</span>
+      </div>
+
+      <div class="artifact-card" data-category="vegetables">
+        <h2 class="artifact-name">Помидор</h2>
+        <img src="https://foodcity.ru/storage/products/October2018/tFVuCnmXrEh4rWqkH3Gx.jpg" alt="Помидор" />
+        <p class="artifact-short-desc">Спелый красный помидор для салатов и блюд.</p>
+        <button class="details-btn">Подробнее</button>
+        <span class="click-counter">Кликов: 0</span>
+      </div>
+
+      <div class="artifact-card" data-category="fruits">
+        <h2 class="artifact-name">Клубника</h2>
+        <img src="https://berry-valley.ru/wp-content/uploads/2021/03/strawbery-scaled.jpg" alt="Клубника" />
+        <p class="artifact-short-desc">Сладкая и ароматная клубника с летним вкусом.</p>
+        <button class="details-btn">Подробнее</button>
+        <span class="click-counter">Кликов: 0</span>
+      </div>
+
+      <div class="artifact-card" data-category="vegetables">
+        <h2 class="artifact-name">Брокколи</h2>
+        <img src="https://21mm.ru/upload/resize_cache/iblock/d7e/600_400_1/d7e13c17f394d2cd3c66e8801b9b1ccf.jpg" alt="Брокколи" />
+        <p class="artifact-short-desc">Полезный и питательный овощ для здоровья.</p>
+        <button class="details-btn">Подробнее</button>
+        <span class="click-counter">Кликов: 0</span>
+      </div>
+
+      <div class="artifact-card" data-category="bakery">
+        <h2 class="artifact-name">Хлеб</h2>
+        <img src="https://produktoff.kz/pictures/product/big/24738_big.png" alt="Хлеб" />
+        <p class="artifact-short-desc">Батон хрустящий свежий очень.</p>
+        <button class="details-btn">Подробнее</button>
+        <span class="click-counter">Кликов: 0</span>
+      </div>
+
+      <div class="artifact-card" data-category="fruits">
+        <h2 class="artifact-name">Апельсин</h2>
+        <img src="https://images.gastronom.ru/79bcsAhEUFs2rOXBK8xz6pD9mmkHLfpEYCChtj9wN8I/pr:product-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzQxNDMwYmQwLThiZmUtNDJkYi04MTdjLTQzYmUzOTRjNWM0OS5qcGc.webp" alt="Апельсин" />
+        <p class="artifact-short-desc">Цитрусовый фрукт с освежающим вкусом.</p>
+        <button class="details-btn">Подробнее</button>
+        <span class="click-counter">Кликов: 0</span>
+      </div>
+
+      <div class="artifact-card" data-category="vegetables">
+        <h2 class="artifact-name">Огурец</h2>
+        <img src="https://pikanta.ru/wp-content/uploads/2020/08/ogurci-350x350.png" alt="Огурец" />
+        <p class="artifact-short-desc">Свежий огурец для салатов и закусок.</p>
+        <button class="details-btn">Подробнее</button>
+        <span class="click-counter">Кликов: 0</span>
+      </div>
+
+      <div class="artifact-card" data-category="bakery">
+        <h2 class="artifact-name">Круассан</h2>
+        <img src="https://cdn.bellinigroup.ru/upload/202303/6424656642276_400x400_fit.png.webp" alt="Круассан" />
+        <p class="artifact-short-desc">Слойка с маслом, идеальна к кофе.</p>
+        <button class="details-btn">Подробнее</button>
+        <span class="click-counter">Кликов: 0</span>
+      </div>
+
+      <div class="artifact-card" data-category="fruits">
+        <h2 class="artifact-name">Виноград</h2>
+        <img src="https://frutsnab.ru/wa-data/public/shop/products/32/00/32/images/72/72.970.jpg" alt="Виноград" />
+        <p class="artifact-short-desc">Сладкий виноград для перекусов и вин.</p>
+        <button class="details-btn">Подробнее</button>
+        <span class="click-counter">Кликов: 0</span>
+      </div>
+
+      <div class="artifact-card" data-category="vegetables">
+        <h2 class="artifact-name">Капуста</h2>
+        <img src="https://www.abri-kos.ru/upload/iblock/7e0/7e0797a7f095a427d8ab60185458ecb7.jpg" alt="Капуста" />
+        <p class="artifact-short-desc">Свежая капуста для салатов и супов.</p>
+        <button class="details-btn">Подробнее</button>
+        <span class="click-counter">Кликов: 0</span>
+      </div>
+
+      <div class="artifact-card" data-category="bakery">
+        <h2 class="artifact-name">Пирожное</h2>
+        <img src="https://media.ovkuse.ru/images/recipes/6c9521b2-f43d-404e-8771-0941b372d481/6c9521b2-f43d-404e-8771-0941b372d481_420_420.webp" alt="Пирожное" />
+        <p class="artifact-short-desc">Нежное пирожное с кремом и ягодами.</p>
+        <button class="details-btn">Подробнее</button>
+        <span class="click-counter">Кликов: 0</span>
+      </div>
+
+    </section>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="hidden">
+      <div id="modal-content">
+        <span id="close-modal">&times;</span>
+        <h2 id="modal-title">Название продукта</h2>
+        <img id="modal-image" src="" alt="" />
+        <p id="modal-description">Полное описание продукта.</p>
+      </div>
+    </div>
+
+    <form id="review-form">
+      <label for="review-text">Ваш отзыв:</label>
+      <input type="text" id="review-text" />
+      <button type="submit">Отправить</button>
+    </form>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>

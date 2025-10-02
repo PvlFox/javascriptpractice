@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice - JavaScript Events</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"
+      />
+    <link rel="stylesheet" href="index.css" />
+    <script defer type="text/javascript" src="index.js"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="heading">
+      <div class="item">
+        <h2 class="ui header">
+          <i class="blue cart icon"></i>
+          <div class="content">FLATIRON SUPERMARKET</div>
+        </h2>
+      </div>
+    </div>
+
+    <div class="ui centered grid">
+      <div class="four wide column">
+        <div class="list-container">
+          <!-- side menu -->
+          <h2 id="cart-message"></h2>
+          <ul class="ui divided list" id="cart-list"></ul>
+          <h2 id="total-price-message"></h2>
+        </div>
+      </div>
+
+      <!-- poster -->
+      <div class="four wide column">
+        <img
+          id="item-image"
+          src="images/image-placeholder.jpg"
+          alt="[ITEM NAME]"
+        />
+      </div>
+
+      <!-- showing info -->
+      <div class="four wide column">
+        <div class="ui cards" id="showing">
+          <div class="card">
+            <select id="item-select" style="margin:40px">
+              <option value="apple">apple</option>
+              <option value="banana">banana</option>
+              <option value="pineapple">pineapple</option>
+            </select>
+            <div id="item-name" class="name">[ITEM NAME]</div>
+            <div class="content">
+              <div class="description">
+                $<span id="item-price" class="ui label">[ITEM PRICE]</span>
+                В корзине: <span id="item-number-in-cart">[X]</span>
+              </div>
+            </div>
+            <div class="extra content">
+              <button id="add-to-cart" class="ui green button">
+                Add To Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+/* Общие стили */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0 20px;
+  background: #f5f7fa;
+  color: #333;
+}
+
+header {
+  margin: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+/* Галерея */
+#gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.artifact-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.artifact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.artifact-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.artifact-name {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.artifact-short-desc {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.details-btn {
+  padding: 5px 10px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+  background-color: #2980b9;
+}
+
+.click-counter {
+  font-size: 12px;
+  color: #777;
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* Модальное окно */
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom:0;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+#modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#modal-content {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 450px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
+}
+
+#close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 22px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+#close-modal:hover {
+  color: #e74c3c;
+}
+
+#modal img {
+  width: 100%;
+  height: auto;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+
+#modal-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#modal-description {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Форма отзывов */
+#review-form {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#review-form input[type="text"] {
+  padding: 8px 12px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#review-form input[type="text"]:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52,152,219,0.5);
+}
+
+#review-form button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2ecc71;
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#review-form button:hover {
+  background-color: #27ae60;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
