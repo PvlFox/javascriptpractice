@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D&D 5e — Списки и детали</title>
+    <script src="./main.js" type="module"></script>
+    <style>
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 16px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        header { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+        main { display: grid; grid-template-columns: 1fr 2fr; gap: 16px; margin-top: 16px; }
+        #list { list-style: none; padding: 0; margin: 0; border: 1px solid #ddd; border-radius: 8px; overflow: auto; max-height: calc(100vh - 160px); }
+        #list li { padding: 10px 12px; border-bottom: 1px solid #eee; cursor: pointer; }
+        #list li:hover { background: #fafafa; }
+        #details { border: 1px solid #ddd; border-radius: 8px; padding: 16px; min-height: 160px; background: #fff; }
+        #loader { display: none; font-size: 14px; color: #666; }
+        /* Card-like details styling */
+        #details h2 { margin: 0 0 8px; font-size: 20px; }
+        #details .subtitle { margin: 0 0 12px; color: #666; font-size: 14px; }
+        #details .meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px 12px; margin: 12px 0; }
+        #details .meta .k { color: #555; font-size: 12px; text-transform: uppercase; letter-spacing: 0.02em; }
+        #details .meta .v { font-weight: 600; }
+        #details .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        #details .tag { background: #f1f5f9; border: 1px solid #e2e8f0; color: #334155; padding: 2px 8px; border-radius: 999px; font-size: 12px; }
+        #details .desc p { margin: 8px 0; line-height: 1.5; }
+        #details details { margin-top: 12px; }
+        #details details > summary { cursor: pointer; color: #2563eb; }
+        #details pre { max-height: 260px; overflow: auto; background: #0b1020; color: #e2e8f0; padding: 12px; border-radius: 6px; font-size: 12px; }
+        label { font-size: 14px; color: #333; }
+        select, input { padding: 6px 8px; }
+        @media (max-width: 800px) { main { grid-template-columns: 1fr; } }
+    </style>
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <h1 style="margin:0; font-size: 18px;">D&D 5e: списки и детали</h1>
+            <label>
+                Категория:
+                <select id="category">
+                    <option value="spells">Заклинания</option>
+                    <option value="monsters">Монстры</option>
+                    <option value="equipment">Экипировка</option>
+                    <option value="classes">Классы</option>
+                    <option value="conditions">Состояния</option>
+                </select>
+            </label>
+            <label>
+                Поиск:
+                <input id="search" type="search" placeholder="введите имя..." />
+            </label>
+            <span id="loader">Загрузка...</span>
+        </header>
+
+        <main>
+            <ul id="list"></ul>
+            <div id="details">Выберите элемент из списка</div>
+        </main>
+    </div>
+</body>
+</html>
