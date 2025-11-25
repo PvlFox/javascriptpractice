@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>D&D Character Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<h1>Конструктор персонажа D&D 5e</h1>
+
+<div id="loading" class="hidden">Загрузка…</div>
+<div id="error" class="hidden"></div>
+
+<section id="form">
+  <label>
+    Имя:
+    <input type="text" id="char-name">
+  </label>
+
+  <label>
+    Раса:
+    <select id="race-select"></select>
+  </label>
+
+  <label>
+    Класс:
+    <select id="class-select"></select>
+  </label>
+
+  <label>
+    Уровень:
+    <input type="number" id="level" min="1" max="20" value="1">
+  </label>
+
+  <h3>Характеристики</h3>
+  <div id="stats">
+
+  </div>
+
+  <button id="preset-standard">Стандартный массив</button>
+  <button id="preset-random">Рандом 4d6</button>
+
+  <button id="save-btn">Сохранить персонажа</button>
+  <button id="load-last-btn">Загрузить последнего</button>
+</section>
+
+<h2>Карточка персонажа</h2>
+<div id="card"></div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
